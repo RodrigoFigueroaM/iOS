@@ -111,7 +111,7 @@
                         <outlet property="colorViewer" destination="xv8-Uz-6pv" id="826-1K-46n"/>
                         <outlet property="greenLabel" destination="2Sh-Xc-S6N" id="O67-w4-yOd"/>
                         <outlet property="greenSlider" destination="Pp8-0w-WQk" id="Bx9-5x-4BR"/>
-                        <outlet property="hecValueLabel" destination="glM-V7-aqt" id="NUD-CF-ViP"/>
+                        <outlet property="hexValueLabel" destination="glM-V7-aqt" id="R9h-o9-KgR"/>
                         <outlet property="redLabel" destination="Do3-Ld-gyh" id="M5K-5S-1hu"/>
                         <outlet property="redSlider" destination="WgA-Du-Ues" id="F8E-yF-DTs"/>
                     </connections>

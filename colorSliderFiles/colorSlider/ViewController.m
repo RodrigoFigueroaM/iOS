@@ -16,7 +16,7 @@
 @synthesize redSlider, redLabel,
             blueSlider,blueLabel,
             greenSlider,greenLabel,
-            colorViewer, hecValueLabel;
+            colorViewer, hexValueLabel;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -41,14 +41,13 @@
     self.redLabel.text= [[NSString alloc] initWithFormat:@"%3d", (int) ((self.redSlider.value) * 255)];
     self.blueLabel.text= [[NSString alloc] initWithFormat:@"%3d", (int) ((self.blueSlider.value) * 255)];
     self.greenLabel.text= [[NSString alloc] initWithFormat:@"%3d", (int) ((self.greenSlider.value) * 255)];
-
-
 }
+
 -(void) updateColorViewer
 {
     self.colorViewer.backgroundColor =[[UIColor alloc] initWithRed:self.redSlider.value green:self.greenSlider.value blue:self.blueSlider.value alpha:1];
     
-    self.hecValueLabel.text = [[NSString alloc]initWithFormat:@"#%X%X%X",(int) ((self.redSlider.value) * 255),(int) ((self.blueSlider.value) * 255), (int) ((self.greenSlider.value) * 255)];
+    self.hexValueLabel.text = [[NSString alloc]initWithFormat:@"#%X%X%X",(int) ((self.redSlider.value) * 255),(int) ((self.blueSlider.value) * 255), (int) ((self.greenSlider.value) * 255)];
     
 }
 @end

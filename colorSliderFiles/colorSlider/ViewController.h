@@ -21,7 +21,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UIView *colorViewer;
-@property (weak, nonatomic) IBOutlet UILabel *hecValueLabel;
+@property (weak, nonatomic) IBOutlet UILabel *hexValueLabel;
 
 
 @property (nonatomic) UIColor * color;
