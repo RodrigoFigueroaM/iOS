@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="11542" systemVersion="16A323" minimumToolsVersion="Automatic" sourceLanguage="Objective-C" userDefinedModelVersionIdentifier="">
+    <entity name="Course" representedClassName="Course" syncable="YES" codeGenerationType="class">
+        <attribute name="avgHwWeight" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="finalWeight" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="midTermWeight" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courseEnrollment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseEnrollment" inverseName="course" inverseEntity="CourseEnrollment" syncable="YES"/>
+    </entity>
+    <entity name="CourseEnrollment" representedClassName="CourseEnrollment" syncable="YES" codeGenerationType="class">
+        <attribute name="avgHwScore" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="finalScore" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <attribute name="midTermScore" optional="YES" attributeType="Integer 16" defaultValueString="0.0" usesScalarValueType="YES" syncable="YES"/>
+        <relationship name="course" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Course" inverseName="courseEnrollment" inverseEntity="Course" syncable="YES"/>
+        <relationship name="student" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Student" inverseName="courseEnrollment" inverseEntity="Student" syncable="YES"/>
+    </entity>
+    <entity name="Student" representedClassName="Student" syncable="YES" codeGenerationType="class">
+        <attribute name="cwid" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="firstName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="lastName" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="courseEnrollment" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="CourseEnrollment" inverseName="student" inverseEntity="CourseEnrollment" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Student" positionX="-117" positionY="-171" width="128" height="103"/>
+        <element name="CourseEnrollment" positionX="70" positionY="-3" width="128" height="118"/>
+        <element name="Course" positionX="225" positionY="162" width="128" height="118"/>
+    </elements>
+</model>
